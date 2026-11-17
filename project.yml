@@ -1,0 +1,44 @@
+name: P2POffline
+
+options:
+  bundleIdPrefix: com.unistyle
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  P2POffline:
+    type: application
+    platform: iOS
+
+    sources:
+      - path: .
+        includes:
+          - "*.swift"
+
+    resources:
+      - path: Assets.xcassets
+      - path: .
+        includes:
+          - "Icon-*.png"
+          - "SplashBackground.jpeg"
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.unistyle.p2poffline
+        PRODUCT_NAME: P2POffline
+        SWIFT_VERSION: "5.0"
+
+        INFOPLIST_FILE: Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS: YES
+
+        MARKETING_VERSION: "2.10.1"
+        CURRENT_PROJECT_VERSION: "67"
+
+        TARGETED_DEVICE_FAMILY: "1"
+        IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO

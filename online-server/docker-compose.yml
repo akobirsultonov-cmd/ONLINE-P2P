@@ -1,0 +1,14 @@
+services:
+  p2p:
+    build: .
+    restart: unless-stopped
+    environment:
+      P2P_ADMIN_PASSWORD: ${P2P_ADMIN_PASSWORD:?Required}
+      P2P_DEVICE_TOKEN: ${P2P_DEVICE_TOKEN:?Required}
+      P2P_SESSION_SECRET: ${P2P_SESSION_SECRET:?Required}
+    volumes:
+      - p2p_data:/data
+    ports:
+      - "127.0.0.1:8000:8000"
+volumes:
+  p2p_data:
